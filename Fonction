@@ -1,0 +1,61 @@
+Fonction dot_product(t1:tab, t2:tab) : tab;
+
+
+/*déclarations des vecteurs*/
+
+VAR
+
+    i: entier
+    t1,t2: tab
+Debut
+   ecrire("donner la taille du tableau")
+    POUR i de 0 à n faire
+        ecrire("donner l'element de t1", t1)
+        lire(t1)
+    fin pour
+
+    pour i de 0 à n faire 
+        ecrire("donner l'element de t2", t2)
+        lire(t2)
+    fin pour
+
+    /* appel à la procedure*/
+
+    Fonction produitScalaire(t1:tab, t2:tab)
+    VAR ps: entier
+    ps=0
+
+    Debut
+    si (t1.length=t2.length et ps=0 )  
+        pour i de 0 à n faire 
+            ps=ps+t1[i]*t2[i]
+        fin pour
+        ecrire ("le proquit scalaire est", ps)
+        ecrire("les  vecteurs t1 et t2 sont orthogonaux")
+    sinon 
+        ecrire("les vecteurs ne sont pas orthogonaux")
+        ecrire("les vecteurs ne sont pas orthogonaux ")
+    finsi
+            
+fin
+
+
+/* Fonction différents types de paramètres de passage */
+
+
+FUNCTION ProduitScalaire(t1,t2 : tab) : BOOLEAN
+    VAR 
+   ps:entier
+   ps=0  
+Debut
+   pour i de 0 à n faire
+        ps=ps +t1[i] * t2[i] ;
+   finpour
+   si(s = 0 ) alors
+        ecrire ("True") 
+   sinon 
+        ecrire ("False") 
+  finsi
+fin
+
+
